@@ -133,6 +133,63 @@
     </section>
     <hr class="m-0" />
 
+    <section class="resume-section" id="projects">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Projects</h2>
+            <ul>
+                <li>세종시 빅데이터 공모전 참여</li>
+                <li>광진구 데이터 분석 공모전 참여</li>
+                <li>대전 지하철 탑승객 수요 예측</li>
+            </ul>
+            <div class="mt-4">
+                <h4>프로젝트 소개 영상</h4>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/vLMhA_HHtoc" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+
+    <section class="resume-section" id="education">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Education</h2>
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">한남대학교</h3>
+                    <div class="subheading mb-3">AI융합학과</div>
+                    <p>4학년 재학 중</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">2020 - Present</span></div>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+
+    <section class="resume-section" id="skills">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Skills</h2>
+            <ul>
+                <li>SQLD</li>
+                <li>ADSP</li>
+                <li>Python (Pandas, Matplotlib, Seaborn, Plotly)</li>
+                <li>Excel, PowerPoint, Google Colab</li>
+            </ul>
+        </div>
+    </section>
+    <hr class="m-0" />
+
+    <section class="resume-section" id="timeline">
+        <div class="resume-section-content">
+            <h2 class="mb-5">My Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item left"><strong>2020</strong>: 한남대 입학</div>
+                <div class="timeline-item right"><strong>2022</strong>: SQLD 취득</div>
+                <div class="timeline-item left"><strong>2023</strong>: ADSP 취득</div>
+                <div class="timeline-item right"><strong>2024</strong>: 광진구·세종시 데이터 분석 공모전 참여</div>
+            </div>
+        </div>
+    </section>
+    <hr class="m-0" />
+
     <section class="resume-section" id="quiz-section">
         <div class="resume-section-content">
             <h2 class="mb-4">나에 대해 얼마나 아시나요?</h2>
@@ -145,8 +202,25 @@
             <p id="quiz-result"></p>
         </div>
     </section>
+    <hr class="m-0" />
 
-    <!-- 나머지 기존 section (projects, education, skills, timeline, awards 등 동일하게 유지) -->
+    <section class="resume-section" id="awards">
+        <div class="resume-section-content">
+            <h2 class="mb-5">Awards</h2>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">세종시 빅데이터 공모전</h5>
+                    <p class="card-text">2024년 참여, 최종 제출 완료</p>
+                </div>
+            </div>
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">광진구 데이터 분석 공모전</h5>
+                    <p class="card-text">데이터 기반 어린이 공원 입지 분석 수행</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
 <p class="text-center mt-5">총 방문자 수: <span id="busuanzi_value_site_pv"></span></p>
 <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -158,13 +232,10 @@ function showIntro() {
 function toggleDarkMode() {
     document.body.classList.toggle("dark-mode");
 }
-// D-Day 계산
 const targetDate = new Date("2025-02-20");
 const today = new Date();
 const diff = Math.ceil((targetDate - today) / (1000 * 60 * 60 * 24));
 document.getElementById("dday").innerText = `졸업까지 D-${diff}`;
-
-// 타이핑 효과
 const introText = "안녕하세요! 저는 데이터 분석에 열정적인 이용현입니다.";
 let i = 0;
 function typeWriter() {
@@ -175,21 +246,15 @@ function typeWriter() {
     }
 }
 typeWriter();
-
-// 날짜 기반 인삿말
 const hour = new Date().getHours();
 const greet = hour < 12 ? '좋은 아침입니다 ☀️' : hour < 18 ? '좋은 오후입니다 🌤️' : '좋은 저녁입니다 🌙';
 document.getElementById("greeting").innerText = greet;
-
-// 퀴즈 채점
 function checkAnswer(el, correct) {
     const result = document.getElementById("quiz-result");
     result.innerText = correct ? "🎉 정답입니다! SQLD 자격증을 보유하고 있어요." : "❌ 아쉽지만 다시 시도해보세요!";
     result.style.fontWeight = 'bold';
     result.style.marginTop = '10px';
 }
-
-// 그래프
 const ctx = document.getElementById('growthChart').getContext('2d');
 new Chart(ctx, {
     type: 'line',
