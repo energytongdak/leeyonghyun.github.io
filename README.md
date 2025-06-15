@@ -7,7 +7,7 @@
 
 [👉 포트폴리오 바로가기](https://energytongdak.github.io/yong.github.io/)
 
-https://energytongdak.github.io/yong.github.io/
+https://energytongdak.github.io/leeyonghyun.github.io/
 ---
 
 ## 🧾 주요 정보
